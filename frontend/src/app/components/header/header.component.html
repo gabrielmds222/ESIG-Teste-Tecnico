@@ -1,0 +1,16 @@
+<header class="header">
+  <div class="user-photo"></div>
+  <div class="title">Título da Aplicação</div>
+  <button (click)="openModal()" class="btn">Adicionar</button>
+</header>
+
+<div *ngIf="showModal" class="modal-backdrop">
+  <div class="modal">
+    <div class="modal-content">
+      <!-- Conteúdo do seu modal aqui -->
+      <h2>Meu Modal</h2>
+      <p>Este é o conteúdo do meu modal.</p>
+      <button (click)="closeModal()">Fechar</button>
+    </div>
+  </div>
+</div>
