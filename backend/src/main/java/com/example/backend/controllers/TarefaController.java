@@ -1,15 +1,28 @@
 package com.example.backend.controllers;
 
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.example.backend.models.Tarefa;
+import com.example.backend.repositories.TarefaRepository;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/")
 public class TarefaController {
-    @GetMapping
-    public ResponseEntity listaTarefas() {
-        return ResponseEntity.ok("Rodou mlk");
+    private TarefaRepository tarefaRepository;
+
+    TarefaController(TarefaRepository tarefaRepository) {
+    this.tarefaRepository = tarefaRepository;
+}
+
+    @GetMapping("/tarefas")
+    List<Tarefa> all() {
+    return tarefaRepository.findAll();
+
+}
+
+    @PostMapping("/tarefas")
+    public Tarefa cadastrarTarefa(@RequestBody Tarefa novaTarefa) {
+        return tarefaRepository.save(novaTarefa);
     }
 }
