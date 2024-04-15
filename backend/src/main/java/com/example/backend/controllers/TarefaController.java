@@ -25,4 +25,9 @@ public class TarefaController {
     public Tarefa cadastrarTarefa(@RequestBody Tarefa novaTarefa) {
         return tarefaRepository.save(novaTarefa);
     }
+
+    @DeleteMapping("tarefas/{id}")
+    void deletaTarefa(@PathVariable Long id) {
+        tarefaRepository.deleteById(id);
+    }
 }
