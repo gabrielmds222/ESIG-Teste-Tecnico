@@ -12,7 +12,19 @@ export class TabelaComponent {
   items = [
     {
       numero: 1,
-      titulo: 'Gabriel',
+      titulo: 'Estudo',
+      responsavel: 'João',
+      deadline: '16/04/2024',
+    },
+    {
+      numero: 2,
+      titulo: 'Trabalho',
+      responsavel: 'João',
+      deadline: '16/04/2024',
+    },
+    {
+      numero: 3,
+      titulo: 'N tenho ideia',
       responsavel: 'João',
       deadline: '16/04/2024',
     },
