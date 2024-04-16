@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -20,4 +22,6 @@ public class Tarefa {
     private String descricao;
     private String responsavel;
     private String prioridade;
+    @Temporal(TemporalType.DATE)
+    private Date deadline;
 }

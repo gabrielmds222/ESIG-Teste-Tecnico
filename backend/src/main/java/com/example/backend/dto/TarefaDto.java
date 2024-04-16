@@ -6,6 +6,8 @@ import jakarta.persistence.Id;
 import lombok.Builder;
 import lombok.Data;
 
+import java.util.Date;
+
 @Data
 @Builder
 public class TarefaDto {
@@ -14,4 +16,5 @@ public class TarefaDto {
     private String descricao;
     private String responsavel;
     private String prioridade;
+    private Date deadline;
 }
