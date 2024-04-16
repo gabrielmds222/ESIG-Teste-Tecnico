@@ -62,6 +62,16 @@
   z-index: 9998;
 }
 
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.modal-header button {
+  padding: 5px;
+}
+
 .form {
   display: flex;
   flex-direction: column;
