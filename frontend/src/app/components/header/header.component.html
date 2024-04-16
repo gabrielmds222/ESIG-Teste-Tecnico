@@ -6,31 +6,59 @@
 
 <div *ngIf="showModal" class="modal-backdrop">
   <div class="modal">
-    <form class="form">
+    <form class="form" [formGroup]="formGroup" (ngSubmit)="submitForm()">
       <div class="form-group">
-        <input type="text" id="titulo" name="titulo" />
+        <input
+          type="text"
+          id="titulo"
+          name="titulo"
+          formControlName="titulo"
+          required
+        />
         <label for="titulo">Título: </label>
       </div>
 
       <div class="form-group">
-        <textarea id="descricao" name="descricao"></textarea>
+        <textarea
+          id="descricao"
+          name="descricao"
+          formControlName="descricao"
+        ></textarea>
         <label for="descricao">Descrição: </label>
       </div>
 
       <div class="form-group">
-        <input type="text" id="responsavel" name="responsavel" />
+        <input
+          type="text"
+          id="responsavel"
+          name="responsavel"
+          formControlName="responsavel"
+          required
+        />
         <label for="responsavel">Responsável:</label>
       </div>
 
       <div class="form-group">
-        <input type="date" id="deadline" name="deadline" />
+        <input
+          type="date"
+          id="deadline"
+          name="deadline"
+          formControlName="deadline"
+          required
+        />
         <label for="deadline">Deadline:</label>
       </div>
 
       <div class="select-group">
         <label for="HeadlineAct" class="label"> Prioridade: </label>
 
-        <select name="HeadlineAct" id="HeadlineAct" class="select">
+        <select
+          name="HeadlineAct"
+          id="HeadlineAct"
+          class="select"
+          formControlName="prioridade"
+          required
+        >
           <option value="">Select</option>
           <option value="alta">Alta</option>
           <option value="media">Média</option>
@@ -40,5 +68,30 @@
 
       <button type="submit" class="btn">Buscar</button>
     </form>
+    <!-- <h2>Formulário Angular</h2>
+    <h2>Formulário Angular</h2>
+    <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+      <div>
+        <label for="name">Nome:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          formControlName="name"
+          required
+        />
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          formControlName="email"
+          required
+        />
+      </div>
+      <button type="submit">Enviar</button>
+    </form> -->
   </div>
 </div>
