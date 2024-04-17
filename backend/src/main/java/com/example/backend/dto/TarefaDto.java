@@ -17,4 +17,5 @@ public class TarefaDto {
     private String responsavel;
     private String prioridade;
     private Date deadline;
+
 }
